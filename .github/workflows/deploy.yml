@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -34,6 +34,11 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          # Set base path for GitHub Pages (repository name)
+          # For user/organization pages (username.github.io), use "/"
+          # For project pages, use "/repository-name/"
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run build
 
       - name: Upload artifact
