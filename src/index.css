@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Redisplay Design System - Warm, eco-friendly palette */
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 40 33% 96%;
+    --foreground: 30 15% 20%;
+
+    /* Card with slight warmth */
+    --card: 40 30% 98%;
+    --card-foreground: 30 15% 20%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 30 15% 20%;
+
+    /* Primary: Sage green (eco-friendly) */
+    --primary: 158 35% 40%;
+    --primary-foreground: 40 33% 98%;
+
+    /* Secondary: Warm wood brown */
+    --secondary: 30 40% 85%;
+    --secondary-foreground: 30 30% 25%;
+
+    /* Muted: Soft sage */
+    --muted: 140 15% 92%;
+    --muted-foreground: 30 10% 45%;
+
+    /* Accent: Golden sunset */
+    --accent: 38 80% 55%;
+    --accent-foreground: 30 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 158 35% 40%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --hero-gradient-start: 158 40% 45%;
+    --hero-gradient-end: 140 35% 35%;
+    --wood: 30 45% 45%;
+    --wood-light: 30 40% 70%;
+    --sage: 158 30% 50%;
+    --sage-light: 158 25% 85%;
+    --cream: 40 33% 96%;
+    --sunset: 38 80% 55%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

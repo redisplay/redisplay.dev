@@ -1,0 +1,44 @@
+[
+  {
+    "id": "clock",
+    "name": "Clock Display",
+    "description": "Beautiful analog and digital clock faces with customizable styles",
+    "icon": "Clock",
+    "category": "utilities"
+  },
+  {
+    "id": "weather",
+    "name": "Weather Dashboard",
+    "description": "Real-time weather information with forecasts and conditions",
+    "icon": "Cloud",
+    "category": "utilities"
+  },
+  {
+    "id": "calendar",
+    "name": "Calendar View",
+    "description": "Display upcoming events and appointments at a glance",
+    "icon": "Calendar",
+    "category": "productivity"
+  },
+  {
+    "id": "photo-frame",
+    "name": "Photo Frame",
+    "description": "Slideshow of your favorite photos and memories",
+    "icon": "Image",
+    "category": "media"
+  },
+  {
+    "id": "music-player",
+    "name": "Music Controller",
+    "description": "Control your music with album art and playback controls",
+    "icon": "Music",
+    "category": "media"
+  },
+  {
+    "id": "smart-home",
+    "name": "Smart Home Hub",
+    "description": "Control lights, thermostats, and other smart devices",
+    "icon": "Home",
+    "category": "smart-home"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Kitchen Display",
+    "description": "Old tablet showing recipes and timers",
+    "gradient": "from-amber-400 to-orange-500"
+  },
+  {
+    "id": 2,
+    "title": "Bedside Clock",
+    "description": "Minimal clock with sleep tracking",
+    "gradient": "from-indigo-400 to-purple-500"
+  },
+  {
+    "id": 3,
+    "title": "Home Dashboard",
+    "description": "Smart home controls and weather",
+    "gradient": "from-emerald-400 to-teal-500"
+  },
+  {
+    "id": 4,
+    "title": "Digital Frame",
+    "description": "Rotating family photos",
+    "gradient": "from-rose-400 to-pink-500"
+  },
+  {
+    "id": 5,
+    "title": "Workout Timer",
+    "description": "Exercise intervals and tracking",
+    "gradient": "from-cyan-400 to-blue-500"
+  }
+]
