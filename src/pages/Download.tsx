@@ -1,12 +1,9 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Download = () => {
-  const navigate = useNavigate();
-
   useEffect(() => {
-    // Redirect to the APK file
-    window.location.href = "/apk/app-release.apk";
+    // Redirect to GitHub releases page
+    window.location.href = "https://github.com/redisplay/redisplay/releases/latest";
   }, []);
 
   return (

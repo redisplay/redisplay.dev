@@ -25,9 +25,11 @@ const HeroSection = () => {
             Reduce e-waste while creating something useful. <span className="font-semibold">100% free and open-source</span>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" variant="secondary" className="gap-2 font-semibold">
-              <Download className="w-5 h-5" />
-              Download APK
+            <Button size="lg" variant="secondary" className="gap-2 font-semibold" asChild>
+              <a href="/download">
+                <Download className="w-5 h-5" />
+                Download APK
+              </a>
             </Button>
           </div>
         </div>
