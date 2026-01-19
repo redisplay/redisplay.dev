@@ -26,7 +26,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button size="lg" variant="secondary" className="gap-2 font-semibold" asChild>
-              <a href="/download">
+              <a href="https://github.com/redisplay/app/releases" target="_blank" rel="noopener noreferrer">
                 <Download className="w-5 h-5" />
                 Download APK
               </a>
