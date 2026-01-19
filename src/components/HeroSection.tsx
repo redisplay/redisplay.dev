@@ -1,6 +1,6 @@
-import redisplayLogo from "@/assets/redisplay-logo.png";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import DeviceFrame from "./DeviceFrame";
 
 const HeroSection = () => {
   return (
@@ -20,9 +20,9 @@ const HeroSection = () => {
             <br />
             <span className="text-sunset">A New Purpose</span>
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "0.7s" }}>
             Transform unused Android phones and tablets into beautiful smart displays. 
-            Reduce e-waste while creating something useful. <span className="font-semibold">100% open-source</span> and community-driven.
+            Reduce e-waste while creating something useful. <span className="font-semibold">100% free and open-source</span>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button size="lg" variant="secondary" className="gap-2 font-semibold">
@@ -32,15 +32,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Logo/Image */}
-        <div className="flex-1 flex justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <div className="relative">
-            <img 
-              src={redisplayLogo} 
-              alt="Redisplay - Repurpose old devices into smart displays" 
-              className="w-72 md:w-96 lg:w-[450px] rounded-2xl shadow-2xl animate-float"
-            />
-          </div>
+        {/* Device Frame Simulation */}
+        <div className="flex-1 flex justify-center animate-fade-in" style={{ animationDelay: "0.7s" }}>
+          <DeviceFrame />
         </div>
       </div>
 
