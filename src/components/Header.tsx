@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Github, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Modules", href: "#modules" },
-  { label: "Examples", href: "#examples" },
+  { label: "Features", href: "#features", isHash: true },
+  { label: "Modules", href: "/modules", isHash: false },
+  { label: "Examples", href: "#examples", isHash: true },
+  { label: "Story", href: "#story", isHash: true },
+  { label: "FAQ", href: "#faq", isHash: true },
 ];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +28,19 @@ const Header = () => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleNavClick = (link: typeof navLinks[0], e?: React.MouseEvent) => {
+    if (link.isHash) {
+      e?.preventDefault();
+      if (location.pathname !== "/") {
+        // If we're not on the home page, navigate to home first, then scroll
+        window.location.href = `/${link.href}`;
+      } else {
+        scrollToSection(link.href);
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -51,19 +68,31 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollToSection(link.href)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              link.isHash ? (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavClick(link)}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    isScrolled ? "text-foreground" : "text-primary-foreground"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    isScrolled ? "text-foreground" : "text-primary-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <a
-              href="https://github.com"
+              href="https://github.com/redisplay"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary ${
@@ -92,19 +121,32 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/20">
             <nav className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollToSection(link.href)}
-                  className={`text-sm font-medium text-left transition-colors hover:text-primary ${
-                    isScrolled ? "text-foreground" : "text-primary-foreground"
-                  }`}
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navLinks.map((link) =>
+                link.isHash ? (
+                  <button
+                    key={link.href}
+                    onClick={() => handleNavClick(link)}
+                    className={`text-sm font-medium text-left transition-colors hover:text-primary ${
+                      isScrolled ? "text-foreground" : "text-primary-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-sm font-medium text-left transition-colors hover:text-primary ${
+                      isScrolled ? "text-foreground" : "text-primary-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
               <a
-                href="https://github.com"
+                href="https://github.com/redisplay"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary ${

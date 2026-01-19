@@ -27,8 +27,8 @@ const ModulesSection = () => {
             Display Modules
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose from our growing collection of display modules. 
-            Mix and match to create your perfect smart display.
+            A properly built system that allows you to create pages for each module given a JSON file that describes it. 
+            Choose from our growing collection or create your own custom modules.
           </p>
         </div>
 
@@ -63,7 +63,12 @@ const ModulesSection = () => {
         <div className="text-center mt-12">
           <p className="text-muted-foreground">
             More modules coming soon. Have an idea?{" "}
-            <a href="#" className="text-primary hover:underline font-medium">
+            <a 
+              href="https://github.com/redisplay" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
               Contribute on GitHub
             </a>
           </p>

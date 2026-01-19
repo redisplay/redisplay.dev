@@ -26,19 +26,5 @@
     "description": "Slideshow of your favorite photos and memories",
     "icon": "Image",
     "category": "media"
-  },
-  {
-    "id": "music-player",
-    "name": "Music Controller",
-    "description": "Control your music with album art and playback controls",
-    "icon": "Music",
-    "category": "media"
-  },
-  {
-    "id": "smart-home",
-    "name": "Smart Home Hub",
-    "description": "Control lights, thermostats, and other smart devices",
-    "icon": "Home",
-    "category": "smart-home"
   }
 ]

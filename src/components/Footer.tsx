@@ -23,7 +23,9 @@ const Footer = () => {
               Modules
             </a>
             <a
-              href="#"
+              href="https://github.com/redisplay"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-sunset transition-colors"
             >
               <Github className="w-5 h-5" />
@@ -37,7 +39,18 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/60">
-          <p>© 2024 Redisplay. Open source under MIT License.</p>
+          <p>© 2024 Redisplay. <span className="font-medium">Open source</span> under GPL License. Built by the community, for the community.</p>
+          <p className="mt-2">
+            Created by{" "}
+            <a 
+              href="https://github.com/darioguarascio" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-sunset transition-colors underline"
+            >
+              @darioguarascio
+            </a>
+          </p>
         </div>
       </div>
     </footer>

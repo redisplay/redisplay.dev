@@ -22,7 +22,7 @@ const HeroSection = () => {
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Transform unused Android phones and tablets into beautiful smart displays. 
-            Reduce e-waste while creating something useful.
+            Reduce e-waste while creating something useful. <span className="font-semibold">100% open-source</span> and community-driven.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button size="lg" variant="secondary" className="gap-2 font-semibold">

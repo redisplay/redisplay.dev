@@ -1,4 +1,4 @@
-import { Recycle, Zap, Puzzle, Shield, Wifi, Battery } from "lucide-react";
+import { Recycle, Zap, Puzzle, Shield, Wifi, Code2 } from "lucide-react";
 
 const features = [
   {
@@ -14,7 +14,7 @@ const features = [
   {
     icon: Puzzle,
     title: "Modular Design",
-    description: "Choose from a library of display modules or create your own custom layouts.",
+    description: "A properly built system that creates pages for each module from a JSON file. Create custom modules or use existing ones.",
   },
   {
     icon: Shield,
@@ -27,9 +27,9 @@ const features = [
     description: "Control displays remotely from any device on your home network.",
   },
   {
-    icon: Battery,
-    title: "Always-On Ready",
-    description: "Designed for continuous display with battery-saving optimizations.",
+    icon: Code2,
+    title: "Open Source",
+    description: "Built by the community, for the community. Free, transparent, and fully customizable.",
   },
 ];
 
@@ -43,7 +43,7 @@ const FeaturesSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Built with simplicity and sustainability in mind, Redisplay transforms 
-            forgotten devices into useful smart displays.
+            forgotten devices into useful smart displays. <span className="font-medium">Fully open-source</span> and welcoming contributions from the community.
           </p>
         </div>
 
